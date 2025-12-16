@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>PACE Institute of Technology</title>
+
+  <style>
+    /* Body */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background-color: #f2f2f2;
+      color: #000;
+    }
+
+    
+    header {
+      background-color: #1d4ed8;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2rem;
+    }
+
+    header p {
+      margin: 5px 0 0 0;
+    }
+
+    /* Scrolling Announcement */
+    .scroll {
+      background-color: yellow;
+      color: red;
+      font-weight: bold;
+      padding: 5px 0;
+    }
+
+    /* Navigation */
+    nav {
+      background-color: black;
+      text-align: center;
+      padding: 10px;
+    }
+
+    nav a {
+      color: white;
+      margin: 10px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    /* Sections */
+    section {
+      background-color: white;
+      margin: 15px;
+      padding: 20px;
+      border-radius: 5px;
+    }
+
+    section h2 {
+      color: #1d4ed8;
+      margin-bottom: 10px;
+    }
+
+    /* Image */
+    img {
+      display: block;
+      margin: 15px auto;
+      width: 400px;
+      border: 2px solid #1d4ed8;
+    }
+
+    /* Courses List */
+    ul {
+      list-style-position: inside;
+    }
+
+    /* Form */
+    form {
+      background-color: #f9f9f9;
+      padding: 15px;
+      width: 300px;
+      margin: auto;
+      border: 2px solid #1d4ed8;
+    }
+
+    input, select, textarea {
+      width: 100%;
+      margin-bottom: 10px;
+      padding: 6px;
+      border-radius: 4px;
+      border: 1px solid #1d4ed8;
+    }
+
+    input[type="submit"], input[type="reset"] {
+      width: 48%;
+      background-color: #1d4ed8;
+      color: white;
+      border: none;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    input[type="submit"]:hover, input[type="reset"]:hover {
+      background-color: #2563eb;
+    }
+
+    /* Footer */
+    footer {
+      background-color: black;
+      color: white;
+      text-align: center;
+      padding: 10px;
+    }
+
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>PACE Institute of Technology</h1>
+  <p>Knowledge | Innovation | Excellence</p>
+</header>
+
+<marquee class="scroll">
+  Admissions Open 2025 | Apply Now | Placement Drive Coming Soon
+</marquee>
+
+<nav>
+  <a href="#">Home</a>
+  <a href="#">About</a>
+  <a href="#">Courses</a>
+  <a href="#">Admissions</a>
+  <a href="#">Contact</a>
+</nav>
+
+<img src="pace3.jpeg" alt="College Campus">
+
+<section>
+  <h2>Welcome</h2>
+  <p>
+    PACE Institute of Technology provides quality education, 
+    well-equipped labs, modern infrastructure, and placement opportunities.
+  </p>
+</section>
+
+<section>
+  <h2>Courses Offered</h2>
+  <ul>
+    <li>Computer Science Engineering</li>
+    <li>Electronics & Communication</li>
+    <li>Mechanical Engineering</li>
+    <li>Civil Engineering</li>
+  </ul>
+</section>
+
+<section>
+  <h2>Admission Form</h2>
+  <form>
+    <label>Name</label>
+    <input type="text" placeholder="Enter your name">
+
+    <label>Email</label>
+    <input type="email" placeholder="Enter your email">
+
+    <label>Gender</label>
+    <input type="radio" name="g"> Male
+    <input type="radio" name="g"> Female
+
+    <label>Course</label>
+    <select>
+      <option>Select</option>
+      <option>CSE</option>
+      <option>ECE</option>
+      <option>MECH</option>
+      <option>CIVIL</option>
+    </select>
+
+    <label>Address</label>
+    <textarea rows="3"></textarea>
+
+    <input type="submit" value="Submit">
+    <input type="reset" value="Reset">
+  </form>
+</section>
+
+<footer>
+  © 2025 PACE Institute of Technology
+</footer>
+
+</body>
+</html>

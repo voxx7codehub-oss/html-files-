@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> CSS GRIDS DEMONSTRATION </title>
+        <style>
+            .container{
+                display: grid;
+                background-color:black;
+            /* display:inline-grid; */
+            border: 3px solid violet;
+            padding: 10px;
+            gap: 10px;
+            /* grid-template-columns: 50px 100px 150px; */
+              grid-template-columns: 1fr 1fr 2fr; 
+              /* grid-template-columns: minmax(auto, 50%) 1fr 3cm; */
+               /* grid-template-columns: repeat(4, 100px); */
+                /* grid-template-columns: minmax(100px,auto); */
+                 /* grid-template-columns: repeat(3, 1fr); */
+            }
+            .box{
+                background-color: rgb(0, 255, 60);
+                border: 2px solid white;
+                font-size: 30px;
+                
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            h3 {
+                text-align: center;
+                font-size: 30px;
+
+            }
+        </style>
+    </head>
+    <body>
+        <h3> EXMPLE THE GRID</h3>
+
+        <div class="container">
+            <div class="box">vikram</div>
+             <div class="box">srinadh</div>
+              <div class="box">karim</div>
+               <div class="box">subbu</div>
+                <div class="box">jhon</div>
+                 <div class="box">madan</div>
+                  <div class="box">puri</div>
+                   <div class="box">ashok</div>
+                    <div class="box">vikram</div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            THE GRIDS
+        </title>
+        <style>
+            .container{
+                display:flex ;
+                
+               
+                  /* flex-direction: row;    */
+                 /* flex-direction: column;  */
+                  /* flex-direction: row-reverse;   */
+                 flex-direction: column-reverse; 
+
+                /* justify-content: flex-start; */
+                /* justify-content: flex-end;  */
+                 justify-content: center; 
+                 /* justify-content: space-between;  */
+                /* justify-content: space-around; */
+
+                 /* align-items: center;  */
+                  align-items: flex-start;  
+                /* align-items: flex-end; */
+
+                width: 250px;
+                 /* flex-wrap: wrap;  */
+                /* flex-wrap: wrap-reverse; */
+                flex-wrap: nowrap; 
+
+                  /* flex-flow: row wrap;   */
+                 /* flex-direction: row;  */
+                 /* flex-wrap: wrap;  */
+
+                  /* align-items: center;   */
+                border: 3px solid blue;
+                height: 1000px;
+                margin-bottom: 30px;
+                }
+
+                .box{
+                    width: 40px;
+                    height: 40px;
+                    background: blueviolet;
+                    border: 3px solid black;
+                    font-size: 30px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+
+
+        </style>
+    </head>
+    <body>
+       <div class="container">
+        <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+        <div class="box">4</div>
+        <div class="box">5</div>
+        <div class="box">6</div>
+        <div class="box">7</div>
+       </div> 
+    </body>
+</html>

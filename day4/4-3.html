@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>DYNAMIC WEBSITE</title>
+</head>
+<style>
+    body{
+        background-color: burlywood;
+    }
+    h3,p{
+        text-align: center;
+    }
+</style>
+
+<body>
+    <h3>  POV : LIFE AT  </h3>
+    <P id="clock"></P>
+
+    <script>
+        function showTime(){
+            var time = new Date();
+            document.getElementById("clock").innerHTML = time;
+
+        }
+
+        setInterval(showTime, 500);
+    </script>
+</body>
+</html>

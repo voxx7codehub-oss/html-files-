@@ -1,0 +1,28 @@
+   <!DOCTYPE html>
+<html>
+<body>
+
+    <h2>java script example </h2>
+    <p id="output"></p>
+
+    <script>
+        let name = "vikram";
+        let age = 19;
+        let isEnrolled = true;
+
+        if(age >= 18){
+            console.log(name + "is an adult");
+
+        }
+        else {
+            console.log(name + "is a minor");
+        }
+
+        let text = "";
+        for(let i = 1; i <= 5; i++){
+            text = text + "Iterstion" + i + "<br>";
+        }
+
+        document.getElementById("output").innerHTML = text;
+    </script>
+</body>

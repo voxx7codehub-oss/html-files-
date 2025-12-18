@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Simple Calculator</title>
+    <style>
+        body {
+            background-color: burlywood;
+            font-family: Arial, sans-serif;
+        }
+        input, button {
+            margin: 5px;
+            padding: 5px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h3>Simple Calculator</h3>
+
+    <label>Num 1:</label>
+    <input type="number" id="num1" placeholder="Enter number">
+
+    <label>Num 2:</label>
+    <input type="number" id="num2" placeholder="Enter number">
+
+    <br><br>
+
+    <button onclick="add()">Add</button>
+    <button onclick="subtract()">Subtract</button>
+    <button onclick="multiply()">Multiply</button>
+    <button onclick="divide()">Divide</button>
+
+    <h4>Result: <span id="result">0</span></h4>
+
+    <script>
+        function add() {
+            let a = Number(document.getElementById("num1").value);
+            let b = Number(document.getElementById("num2").value);
+            document.getElementById("result").innerText = a + b;
+        }
+
+        function subtract() {
+            let a = Number(document.getElementById("num1").value);
+            let b = Number(document.getElementById("num2").value);
+            document.getElementById("result").innerText = a - b;
+        }
+
+        function multiply() {
+            let a = Number(document.getElementById("num1").value);
+            let b = Number(document.getElementById("num2").value);
+            document.getElementById("result").innerText = a * b;
+        }
+
+        function divide() {
+            let a = Number(document.getElementById("num1").value);
+            let b = Number(document.getElementById("num2").value);
+            document.getElementById("result").innerText =
+                b !== 0 ? a / b : "Cannot divide by zero";
+        }
+    </script>
+
+</body>
+</html>

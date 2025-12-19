@@ -1,92 +1,100 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Society PowerPulse</title>
+    <title>THE ELECTRICITY BILL CALCULATOR</title>
 
-  <style>
-    body {
-      font-family:Georgia, 'Times New Roman', Times, serif;
-      background-color: #f4f6f8;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      margin: 0;
-    }
+    <style>
+        body {
+            font-family: 'Lucida Sans', Geneva, Verdana, sans-serif;
+            background-color: aqua;
+        }
 
-    .card {
-      background: #ffffff;
-      padding: 20px;
-      width: 300px;
-      border-radius: 8px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-      text-align: center;
-    }
+        .container {
+            width: 420px;
+            margin: 50px auto;
+            background: burlywood;
+            padding: 20px;
+            border-radius: 5px;
+        }
 
-    h1 {
-      font-size: 20px;
-      margin-bottom: 15px;
-    }
+        h2 {
+            text-align: center;
+        }
 
-    input {
-      width: 100%;
-      padding: 8px;
-      margin-bottom: 12px;
-      font-size: 14px;
-    }
+        input {
+            width: 100%;
+            padding: 8px;
+            margin: 6px 0;
+        }
 
-    button {
-      width: 100%;
-      padding: 10px;
-      background-color: #13db88;
-      color: rgb(187, 66, 66);
-      border: none;
-      cursor: pointer;
-      border-radius: 4px;
-    }
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: bisque;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+        }
 
-    button:hover {
-      background-color: #e4d50d;
-    }
-
-    .result {
-      margin-top: 15px;
-      font-weight: bold;
-    }
-  </style>
+        .result {
+            margin-top: 10px;
+            background-color: azure;
+            font-weight: bold;
+            padding: 10px;
+        }
+    </style>
 </head>
 
 <body>
 
-  <div class="card">
-    <h1>⚡ Society PowerPulse</h1>
+<div class="container">
+    <h2>Electricity Bill Calculator</h2>
 
-    <input id="units" type="number" placeholder="Enter units (kWh)">
+    <label>User Name:</label>
+    <input type="text" id="username" placeholder="Enter your name">
 
-    <button onclick="calculateBill()">Calculate Bill</button>
+    <label>Meter Number:</label>
+    <input type="text" id="meter" placeholder="Enter meter number">
 
-    <div id="result" class="result"></div>
-  </div>
+    <label>Watts:</label>
+    <input type="number" id="watts" placeholder="Enter watts">
 
-  <script>
-    function calculateBill() {
-      const units = document.getElementById("units").value;
-      const ratePerUnit = 6; // basic example rate
-      const result = document.getElementById("result");
+    <label>Units (kWh):</label>
+    <input type="number" id="units" placeholder="Enter units">
 
-      if (units === "" || units <= 0) {
-        result.textContent = "Please enter valid units";
+    <button onclick="calculateBill()">Calculate</button>
+
+    <div class="result" id="result"></div>
+</div>
+
+<script>
+function calculateBill() {
+    var username = document.getElementById("username").value;
+    var meter = document.getElementById("meter").value;
+    var watts = Number(document.getElementById("watts").value);
+    var units = Number(document.getElementById("units").value);
+    var rate = 5;
+
+    var result = document.getElementById("result");
+
+    if (username === "" || meter === "" || watts <= 0 || units <= 0) {
+        result.innerHTML = "Please fill all fields correctly.";
         result.style.color = "red";
-        return;
-      }
+    } else {
+        var bill = units * rate;
 
-      const bill = units * ratePerUnit;
-      result.textContent = "Estimated Bill: ₹" + bill;
-      result.style.color = "green";
+        result.style.color = "green";
+        result.innerHTML = `
+            User Name: ${username}<br>
+            Meter Number: ${meter}<br>
+            Watts: ${watts} W<br>
+            Units Consumed: ${units} kWh<br>
+            <hr>
+            Total Bill Amount: ₹ ${bill.toFixed(2)}
+        `;
     }
-  </script>
+}
+</script>
 
 </body>
 </html>

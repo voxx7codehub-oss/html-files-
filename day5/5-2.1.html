@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Society PowerPulse</title>
+
+  <style>
+    body {
+      font-family:Georgia, 'Times New Roman', Times, serif;
+      background-color: #f4f6f8;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .card {
+      background: #ffffff;
+      padding: 20px;
+      width: 300px;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 20px;
+      margin-bottom: 15px;
+    }
+
+    input {
+      width: 100%;
+      padding: 8px;
+      margin-bottom: 12px;
+      font-size: 14px;
+    }
+
+    button {
+      width: 100%;
+      padding: 10px;
+      background-color: #13db88;
+      color: rgb(187, 66, 66);
+      border: none;
+      cursor: pointer;
+      border-radius: 4px;
+    }
+
+    button:hover {
+      background-color: #e4d50d;
+    }
+
+    .result {
+      margin-top: 15px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="card">
+    <h1>⚡ Society PowerPulse</h1>
+
+    <input id="units" type="number" placeholder="Enter units (kWh)">
+
+    <button onclick="calculateBill()">Calculate Bill</button>
+
+    <div id="result" class="result"></div>
+  </div>
+
+  <script>
+    function calculateBill() {
+      const units = document.getElementById("units").value;
+      const ratePerUnit = 6; // basic example rate
+      const result = document.getElementById("result");
+
+      if (units === "" || units <= 0) {
+        result.textContent = "Please enter valid units";
+        result.style.color = "red";
+        return;
+      }
+
+      const bill = units * ratePerUnit;
+      result.textContent = "Estimated Bill: ₹" + bill;
+      result.style.color = "green";
+    }
+  </script>
+
+</body>
+</html>

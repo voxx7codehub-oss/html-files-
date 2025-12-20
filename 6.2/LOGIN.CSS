@@ -3,7 +3,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
+    font-family:popin , sans-serif;
     transition: all 0.4s ease;
 }
 
@@ -62,7 +62,7 @@ nav ul li a:hover {
 }
 
 .logout-btn:hover {
-    background: #c0392b;
+    background: #11e3ff;
 }
 
 
@@ -115,7 +115,7 @@ nav ul li a:hover {
 }
 
 .login button:hover {
-    background: #2980b9;
+    background: #f1faff;
     transform: translateY(-2px);
 }
 
@@ -142,14 +142,14 @@ section {
 }
 
 
-.home-bg { background: linear-gradient(135deg, #c492fa, #123269); }
+.home-bg { background: linear-gradient(135deg, #ff4800, #1dff30); }
 .about-bg { background: linear-gradient(135deg, #ff9a9e, #fad0c4); color: #2c3e50; }
 .services-bg { background: linear-gradient(135deg, #43cea2, #185a9d); }
-.contact-bg { background: linear-gradient(135deg, #ffafbd, #ffc3a0); color: #2c3e50; }
+.contact-bg { background: linear-gradient(135deg, #ffafbd, #ff9659); color: #2c3e50; }
 
 
 #error {
-    color: #e74c3c;
+    color: #c5eb20;
     font-weight: 600;
     margin-top: 10px;
 }
@@ -175,3 +175,4 @@ section {
         font-size: 1.1rem;
     }
 }
+

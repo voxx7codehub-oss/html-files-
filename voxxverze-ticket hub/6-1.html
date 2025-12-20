@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>🎟️ VOXXYVERZE Ticket Hub</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <h1>🎟️ VOXXYVERZE Ticket Hub</h1>
+    <p>One Platform → All Ticket Booking Sites</p>
+  </header>
+
+  <section class="cards">
+    <div class="card" onclick="goToSite('movie')">🎬 Movie Tickets</div>
+    <div class="card" onclick="goToSite('pvr')">🎬 PVR Cinemas</div>
+    <div class="card" onclick="goToSite('paytm movie')">🎬 Paytm Movies</div>
+
+    <div class="card" onclick="goToSite('bus')">🚌 Bus Tickets</div>
+    <div class="card" onclick="goToSite('abhibus')">🚌 AbhiBus</div>
+    <div class="card" onclick="goToSite('makemytrip bus')">🚌 MakeMyTrip Bus</div>
+
+    <div class="card" onclick="goToSite('train')">🚆 Train Tickets</div>
+    <div class="card" onclick="goToSite('cleartip train')">🚆 ClearTrip Trains</div>
+    <div class="card" onclick="goToSite('makemytrip train')">🚆 MakeMyTrip Trains</div>
+
+    <div class="card" onclick="goToSite('flight')">✈️ Flight Tickets</div>
+    <div class="card" onclick="goToSite('yatra')">✈️ Yatra Flights</div>
+    <div class="card" onclick="goToSite('cleartrip flight')">✈️ ClearTrip Flights</div>
+    <div class="card" onclick="goToSite('goibibo')">✈️ Goibibo Flights</div>
+    <div class="card" onclick="goToSite('indigo')">✈️ IndiGo</div>
+
+    <div class="card" onclick="goToSite('event')">🎤 Event Tickets</div>
+    <div class="card" onclick="goToSite('insider')">🎟️ Insider</div>
+    <div class="card" onclick="goToSite('ticketmaster')">🎟️ TicketMaster</div>
+
+    <div class="card" onclick="goToSite('holiday')">🏝️ Holidays & Packages</div>
+    <div class="card" onclick="goToSite('thomascook')">🏝️ Thomas Cook</div>
+  </section>
+
+  <!-- Dropdown menu for all ticket types -->
+  <select onchange="goToSite(this.value)">
+    <option value="">Select Ticket Type</option>
+    <option value="movie">Movie Tickets</option>
+    <option value="pvr">PVR Cinemas</option>
+    <option value="paytm movie">Paytm Movies</option>
+    <option value="bus">Bus Tickets</option>
+    <option value="abhibus">AbhiBus</option>
+    <option value="makemytrip bus">MakeMyTrip Bus</option>
+    <option value="train">Train Tickets</option>
+    <option value="cleartip train">ClearTrip Trains</option>
+    <option value="makemytrip train">MakeMyTrip Trains</option>
+    <option value="flight">Flight Tickets</option>
+    <option value="yatra">Yatra Flights</option>
+    <option value="cleartrip flight">ClearTrip Flights</option>
+    <option value="goibibo">Goibibo Flights</option>
+    <option value="indigo">IndiGo</option>
+    <option value="event">Event Tickets</option>
+    <option value="insider">Insider</option>
+    <option value="ticketmaster">TicketMaster</option>
+    <option value="holiday">Holidays & Packages</option>
+    <option value="thomascook">Thomas Cook</option>
+  </select>
+
+  <footer>
+    <p>🎟️ THIS IS NOT A BOOKING WEBSITE. IT IS A GATEWAY FOR TICKET BOOKING.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
